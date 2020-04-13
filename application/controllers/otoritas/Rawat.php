@@ -14,10 +14,10 @@ class Rawat extends Authentication {
 	public function index()
 	{
 		$this->load->view('layout/header');
-		$this->rawat->db->join('POLItpp','POLItpp.KDPoli = DBPassIRNA.KdBangsal');
+		$this->rawat->db->join('TBLBangsal','TBLBangsal.KdBangsal = DBPassIRNA.KdBangsal');
 		$this->load->view('otoritas/rawat/index', array(
 			'rawats'	=> $this->rawat->all(),
-			'masterpolis'	=> $this->rawat->db->get('POLItpp')->result()
+			'masterpolis'	=> $this->rawat->db->get('TBLBangsal')->result()
 		));
 		$this->load->view('layout/footer',array(
 			'js'	=> 'otoritas/rawat'

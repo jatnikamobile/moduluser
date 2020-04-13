@@ -23,6 +23,7 @@
 										<label for="kode-group" class="col-md-3">Depo</label>
 										<div class="col-md-9">
 											<select name="KdDepo" id="" class="form-control">
+												<option value=""></option>
 												<?php foreach ($masterdepos as $masterdepo):?>
 													<option value="<?php echo $masterdepo->KdDepo;?>"><?php echo $masterdepo->NmDepo;?></option>
 												<?php endforeach;?>

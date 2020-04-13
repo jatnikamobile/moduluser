@@ -23,8 +23,9 @@
 										<label for="kode-group" class="col-md-3">Bangsal</label>
 										<div class="col-md-9">
 											<select name="KdBangsal" id="" class="form-control">
+												<option value="0">--pilih bangsal--</option>
 												<?php foreach ($masterpolis as $masterpoli):?>
-													<option value="<?php echo $masterpoli->KDPoli;?>"><?php echo $masterpoli->NMPoli;?></option>
+													<option value="<?php echo $masterpoli->KdBangsal;?>"><?php echo $masterpoli->NmBangsal;?></option>
 												<?php endforeach;?>
 											</select>
 										</div>
@@ -76,7 +77,7 @@
 															<?php endif;?>
 														</td>
 														<td>
-															<?php echo $rawat->NMPoli;?>
+															<?php echo $rawat->NmBangsal;?>
 														</td>
 														<td>
 															<button class="fa fa-pencil btn-edit" data-code="<?php echo $rawat->NamaUser;?>"></button>

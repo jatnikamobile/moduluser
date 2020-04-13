@@ -5,8 +5,9 @@
 				<div class="col-md-12">
 					<div class="card ">
 						<div class="card-header">
-							<a href="<?php echo base_url('medicine/form');?>"><i class="fa fa-tachometer"></i>Input Master</a>
-							<a href="<?php echo base_url('medicine');?>"><i class="fa fa-list"></i>Daftar Obat</a>		</div>
+							<a href="<?php echo base_url('doctors/form');?>"><i class="fa fa-tachometer"></i>Input Master</a>
+							<a href="<?php echo base_url('doctors');?>"><i class="fa fa-list"></i>Daftar Dokter</a>
+						</div>
 						<div class="card-body">
 							<form class="card form-input"  action="<?php echo current_url();?>"  method="post">
 								<div class="card-body">
