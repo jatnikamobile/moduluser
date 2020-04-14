@@ -20,6 +20,34 @@ class UserModel extends Model {
 			));
 			return true;
 		}
+		$query = $this->db->select('*')->from('DBPass')->where('NamaUser', strtoupper($name))->where('Password', strtoupper($password))->get();
+		if($query->num_rows()){
+			$cek_up = $query->row();
+			$this->session->set_userdata(array(
+				'logged_in'	=> true,
+				'username'		=> $cek_up->NamaUser,
+				'akses_level'	=> $cek_up->oLevel,
+				'id_user'		=> $cek_up->NamaUser,
+				'kd_depo'		=> $cek_up->KdDepo,
+				'o_level'		=> $cek_up->oLevel,
+				'shift'			=> $shift,
+			));
+			return true;
+		}
+		$query = $this->db->select('*')->from('DBPassIRNA')->where('NamaUser', strtoupper($name))->where('Password', strtoupper($password))->get();
+		if($query->num_rows()){
+			$cek_up = $query->row();
+			$this->session->set_userdata(array(
+				'logged_in'	=> true,
+				'username'		=> $cek_up->NamaUser,
+				'akses_level'	=> $cek_up->oLevel,
+				'id_user'		=> $cek_up->NamaUser,
+				'kd_depo'		=> $cek_up->KdDepo,
+				'o_level'		=> $cek_up->oLevel,
+				'shift'			=> $shift,
+			));
+			return true;
+		}
 		return false;
 	}
 

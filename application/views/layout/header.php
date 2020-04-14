@@ -63,6 +63,9 @@
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="<?php echo base_url('doctors');?>">Dokter</a>
+						<a class="dropdown-item" href="<?php echo base_url('bangsal');?>">Bangsal</a>
+						<a class="dropdown-item" href="<?php echo base_url('kelas');?>">Kelas</a>
+						<a class="dropdown-item" href="<?php echo base_url('kodekelas');?>">Kode Kelas</a>
 					</div>
 				</li>
 				<li class="nav-item dropdown">

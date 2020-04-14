@@ -5,7 +5,7 @@
 				<div class="col-md-12">
 					<div class="card">
 						<div class="card-body">
-							<h5>Form Group Obat</h5>
+							<h5>Form Depo</h5>
 								<form action="<?php echo current_url();?>" method="post" class="form-filter form-input">
 									<div class="row form-group">
 										<label for="kode-group" class="col-md-3">Nama User</label>
@@ -45,7 +45,7 @@
 					</div>
 						<div class="card">
 							<div class="card-header">
-								<label for="">Daftar Group Obat</label>
+								<label for="">Daftar Depo</label>
 							</div>
 							<div class="card-body">
 								<?php if($depos):?>
