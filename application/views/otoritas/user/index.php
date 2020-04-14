@@ -20,9 +20,10 @@
 										</div>
 									</div>
 									<div class="row form-group">
-										<label for="kode-group" class="col-md-3">Bangsal</label>
+										<label for="kode-group" class="col-md-3">Poli</label>
 										<div class="col-md-9">
 											<select name="KdPoli" id="" class="form-control">
+												<option value="0">--pilih poli--</option>
 												<?php foreach ($masterpolis as $masterpoli):?>
 													<option value="<?php echo $masterpoli->KDPoli;?>"><?php echo $masterpoli->NMPoli;?></option>
 												<?php endforeach;?>

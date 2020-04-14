@@ -63,7 +63,7 @@ class Rawat extends CI_Controller
 
 	public function show($code)
 	{
-		
+
 		echo json_encode(array(
 			'data'	=> $this->rawat->find(array(
 				'NamaUser'	=> $code
