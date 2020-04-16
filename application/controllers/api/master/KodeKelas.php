@@ -28,8 +28,6 @@ class KodeKelas extends CI_Controller
 				}
 				$post['Kode']	= $kode;
 
-				var_dump($lastCode);
-				exit;
 				$this->kelas->insert($post);
 			}else{
 				$this->kelas->update($post, array(

@@ -66,6 +66,7 @@
 						<a class="dropdown-item" href="<?php echo base_url('bangsal');?>">Bangsal</a>
 						<a class="dropdown-item" href="<?php echo base_url('kelas');?>">Kelas</a>
 						<a class="dropdown-item" href="<?php echo base_url('kodekelas');?>">Kode Kelas</a>
+						<a class="dropdown-item" href="<?php echo base_url('poliklinik');?>">Poliklinik</a>
 					</div>
 				</li>
 				<li class="nav-item dropdown">
