@@ -25,19 +25,23 @@ class User extends CI_Controller
 				'NamaUser'	=> $namauser
 			))){
 				$this->user->update(array(
+					'DisplayName'	=> $post['NamaUser'],
 					'oLevel'	=> $olevel,
 					'NamaUser'	=> $namauser,
 					'KdPoli'	=> $kddepo,
-					'Password'	=> $password
+					'Password'	=> $password,
+					'TRGroup'	=> 'ALL'
 				), array(
 					'NamaUser'	=> $namauser,
 				));
 			}else{
 				$this->user->insert(array(
+					'DisplayName'	=> $post['NamaUser'],
 					'oLevel'	=> $olevel,
 					'NamaUser'	=> $namauser,
 					'KdPoli'	=> $kddepo,
-					'Password'	=> $password
+					'Password'	=> $password,
+					'TRGroup'	=> 'ALL'
 				));
 			}
 			echo json_encode(array(
