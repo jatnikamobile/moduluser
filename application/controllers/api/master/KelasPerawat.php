@@ -1,5 +1,5 @@
 <?php
-class Kelas extends CI_Controller
+class KelasPerawat extends CI_Controller
 {
 	public function __construct()
 	{
@@ -27,19 +27,9 @@ class Kelas extends CI_Controller
 				}
 				$post['KDKelas'] = $kdkelas;
 				$post['ValidUser'] = $this->session->userdata('username');
-				$this->kelas->insert(array(
-					'KDKelas'	=> $kdkelas,
-					'ValidUser' => $this->session->userdata('username'),
-					'NMKelas'	=> $post['NMKelas'],
-					'ByTarif'	=> $post['ByTarif'],
-				));
+				$this->kelas->insert($post);
 			}else{
-				$this->kelas->update(array(
-					'KDKelas'	=> $kdkelas,
-					'ValidUser' => $this->session->userdata('username'),
-					'NMKelas'	=> $post['NMKelas'],
-					'ByTarif'	=> $post['ByTarif'],
-				), array(
+				$this->kelas->update($post, array(
 					'KDKelas'	=> $kdkelas
 				));
 			}

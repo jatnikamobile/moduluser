@@ -5,24 +5,44 @@
 				<div class="col-md-12">
 					<div class="card">
 						<div class="card-body">
-							<h5>Form Kelas</h5>
+							<h5>Form Kelas Perawat</h5>
 								<form action="<?php echo current_url();?>" method="post" class="form-filter form-input">
 									<div class="row form-group">
 										<label for="kode-group" class="col-md-3">Kode Kelas</label>
 										<div class="col-md-3">
-											<input type="text" class="form-control" name="KDKelas">
+											<input type="text" class="form-control" name="KDKelas" readonly>
 										</div>
 									</div>
 									<div class="row form-group">
-										<label for="kode-group" class="col-md-3">Nama Kelas</label>
-										<div class="col-md-9">
-											<input type="text" class="form-control" name="NMKelas">
+										<label for="kode-group" class="col-md-3">Keterangan Kelas</label>
+										<div class="col-md-3">
+											<input type="text" class="form-control" name="Kode">
+										</div>
+										<div class="col-md-6">
+											<select type="text" class="form-control" name="NMKelas">
+												<?php foreach ($kodekelases as $kodekelase):?>
+													<option value="<?php echo $kodekelase->Keterangan;?>" data-kd="<?php echo $kodekelase->Kode;?>"><?php echo $kodekelase->Keterangan;?></option>
+												<?php endforeach;?>
+											</select>
+										</div>
+									</div>
+									<div class="row form-group">
+										<label for="kode-group" class="col-md-3">Ruang Rawat</label>
+										<div class="col-md-3">
+											<input type="text" class="form-control" name="KDRrawat">
+										</div>
+										<div class="col-md-6">
+											<select type="text" class="form-control" name="NMRrawat">
+												<?php foreach ($ruangrawats as $ruangrawat):?>
+													<option value="<?php echo $ruangrawat->NmBangsal;?>" data-kd="<?php echo $ruangrawat->KdBangsal;?>"><?php echo $ruangrawat->NmBangsal;?></option>
+												<?php endforeach;?>
+											</select>
 										</div>
 									</div>
 									<div class="row form-group">
 										<label for="kode-group" class="col-md-3">Tarif</label>
-										<div class="col-md-9">
-											<input type="number" class="form-control" name="ByTarif" value="0">
+										<div class="col-md-3">
+											<input type="number" class="form-control" name="ByTarif">
 										</div>
 									</div>
 									<button class="btn btn-info pull-right">Save</button>
@@ -31,7 +51,7 @@
 					</div>
 						<div class="card">
 							<div class="card-header">
-								<label for="">Daftar Kelas</label>
+								<label for="">Daftar Kelas Perawat</label>
 							</div>
 							<div class="card-body">
 								<?php if($kelases):?>

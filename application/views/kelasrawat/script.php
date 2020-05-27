@@ -16,14 +16,6 @@
 		});
 	});
 
-	$('[name="NMRrawat"]').on('change', function () {
-		var kd = $(this).find('option:selected').data('kd');
-		$('[name="KDRrawat"]').val(kd);
-	});
-	$('[name="NMKelas"]').on('change', function () {
-		var kd = $(this).find('option:selected').data('kd');
-		$('[name="Kode"]').val(kd);
-	});
 	$(document).on('click', '.btn-edit', function () {
 		var code = $(this).data('code');
 		$.ajax({
@@ -33,7 +25,6 @@
 			success:function (response) {
 				$('[name="NMKelas"]').val(response.data.NMKelas);
 				$('[name="KDKelas"]').val(response.data.KDKelas);
-				$('[name="ByTarif"]').val(response.data.ByTarif);
 			},
 			error:function (response) {
 				console.log(response);

@@ -68,6 +68,7 @@
 						<a class="dropdown-item" href="<?php echo base_url('kodekelas');?>">Kode Kelas</a>
 						<a class="dropdown-item" href="<?php echo base_url('poliklinik');?>">Poliklinik</a>
 						<a class="dropdown-item" href="<?php echo base_url('unit');?>">Unit/Lainnya</a>
+						<a class="dropdown-item" href="<?php echo base_url('kelasperawat');?>">Kelas Perawatan</a>
 					</div>
 				</li>
 				<li class="nav-item dropdown">
