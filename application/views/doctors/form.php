@@ -9,7 +9,7 @@
 							<a href="<?php echo base_url('doctors');?>"><i class="fa fa-list"></i>Daftar Dokter</a>
 						</div>
 						<div class="card-body">
-							<form class="card form-input"  action="<?php echo current_url();?>"  method="post">
+							<?php echo form_open_multipart('api/master/doctors/form');?>
 								<div class="card-body">
 									<div class="row">
 										<div class="col-md-6">
@@ -112,6 +112,18 @@
 													</select>
 												</div>
 											</div>
+
+											<div class="row">
+												<label class="form-group col-md-3">
+													Scan TTD
+												</label>
+												<div class="col-md-9">
+											        <div class="form-group">
+										                <input type="file" name="Pict" id="Pict" class="form-input" required value="">
+											        </div>
+												</div>
+											</div>
+
 											<button type="submit" class="btn btn-info ">Simpan</button>
 										</div>
 									</div>
