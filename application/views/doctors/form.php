@@ -119,7 +119,7 @@
 												</label>
 												<div class="col-md-9">
 											        <div class="form-group">
-										                <input type="file" name="Pict" id="Pict" class="form-input" required value="">
+										                <input type="file" name="Pict" id="Pict" class="form-input" required value="<?php echo $file_ttd;?>">
 											        </div>
 												</div>
 											</div>

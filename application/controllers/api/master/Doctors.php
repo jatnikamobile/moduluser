@@ -31,8 +31,8 @@ class Doctors extends CI_Controller
 			$valid = $this->session->userdata('username');
 			if (!empty($_FILES["Pict"])) {
 				$title =$post['KdDoc'];
-				// $target_dir = "./assets/images/ttd_dok";
-				$target_dir = "D:/ttd_dokter/";
+				$target_dir = "./assets/images";
+				// $target_dir = "D:/ttd_dokter/";
 				$target_file = $target_dir . basename($_FILES["Pict"]["name"]);
 				$uploadOk = 1;
 				$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -69,11 +69,11 @@ class Doctors extends CI_Controller
 				        $data_upload = array('filename' => '', 'keterangan_file' =>'gagal');
 				    }
 				}
-				// redirect('hasilpemeriksaan/form_photo/'.$title['title']);
+				redirect('hasilpemeriksaan/form_photo/'.$title['title']);
 				
 			}
 
-			$this->doctor->db->query("
+			$result = $this->doctor->db->query("
 				sp_AddDokter_MASxhos
       			@kddoc = '$code',
       			@nmdoc = '$nama',
@@ -91,14 +91,19 @@ class Doctors extends CI_Controller
 				@file_stat = '".$data_upload['keterangan_file']."',
 				@regcode = ''
 			");
-			echo json_encode(array(
-				'data'	=> $post,
-			));
+			if($result){
+				redirect('Doctors');
+			}else{
+				echo json_encode(array(
+					'data'	=> $post,
+				));		
+			}
 		}else{
 			echo json_encode(array(
 				'data'	=> false,
 			));
 		}
+		
 	}
 
 	public function index()
