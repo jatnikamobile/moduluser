@@ -69,7 +69,7 @@ class Doctors extends CI_Controller
 				        $data_upload = array('filename' => '', 'keterangan_file' =>'gagal');
 				    }
 				}
-				redirect('hasilpemeriksaan/form_photo/'.$title['title']);
+				// redirect('hasilpemeriksaan/form_photo/'.$title['title']);
 				
 			}
 
