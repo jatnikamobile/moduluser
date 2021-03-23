@@ -31,6 +31,14 @@
 											</div>
 											<div class="row">
 												<label class="form-group col-md-3">
+													SIP Dokter
+												</label>
+												<div class="col-md-9">
+													<input type="text" name="SipDoc" class="form-control" required>
+												</div>
+											</div>
+											<div class="row">
+												<label class="form-group col-md-3">
 													Kategori
 												</label>
 												<div class="col-md-9">

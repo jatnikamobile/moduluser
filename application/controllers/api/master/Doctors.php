@@ -19,6 +19,7 @@ class Doctors extends CI_Controller
 		if($post = $this->input->post()){
 			$code = $post['KdDoc'];
 			$nama = $post['NmDoc'];
+			$SipDoc = $post['SipDoc'];
 			$kategori = $post['Kategori'];
 			$spesialis = $post['Spesialis'];
 			$sex = $post['Sex'];
@@ -73,7 +74,7 @@ class Doctors extends CI_Controller
 				
 			}
 
-			$result = $this->doctor->db->query("
+			$result = $this->doctor->db->query(" EXEC
 				sp_AddDokter_MASxhos
       			@kddoc = '$code',
       			@nmdoc = '$nama',
@@ -86,11 +87,14 @@ class Doctors extends CI_Controller
 				@phone = '$phone',
 				@kdpoli  = '$kdpoli',
 				@nmpoli = '$nmnpoli',
+				@NoPraktek = '$SipDoc',
+				@korps_ttd = '$SipDoc',
 				@validuser = '$valid',
 				@file_ttd = '".$data_upload['filename']."',
 				@file_stat = '".$data_upload['keterangan_file']."',
 				@regcode = ''
 			");
+			print_r($result);die();
 			if($result){
 				redirect('Doctors');
 			}else{
