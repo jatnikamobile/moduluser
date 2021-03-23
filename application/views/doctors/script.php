@@ -33,6 +33,7 @@
 				$('[name="kdPos"]').val(data.KdPos);
 				$('[name="KdPoli"]').val(data.KdPoli);
 				$('[name="Phone"]').val(data.Phone);
+				$('[name="Pict"]').val(data.file_ttd);
 			}
 		});
 	}
