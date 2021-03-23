@@ -27,6 +27,7 @@
 				$('[name="Spesialis"]').val(data.Spesialis);
 				$('[name="Kategori"]').val(data.Kategori);
 				$('[name="Sex"]').val(data.Sex);
+				$('[name="SipDoc"]').val(data.NoPraktek);
 				$('[name="Address"]').val(data.Address);
 				$('[name="City"]').val(data.City);
 				$('[name="kdPos"]').val(data.KdPos);
