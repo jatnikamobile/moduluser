@@ -128,6 +128,7 @@
 												<div class="col-md-9">
 											        <div class="form-group">
 										                <input type="file" name="Pict" id="Pict" class="form-input" required value="<?php echo $file_ttd ?? '' ;?>">
+										                <p name ="pict_name" id="pict_name" ></p>
 											        </div>
 												</div>
 											</div>
