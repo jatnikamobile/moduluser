@@ -94,7 +94,7 @@ class Doctors extends CI_Controller
 				@file_stat = '".$data_upload['keterangan_file']."',
 				@regcode = ''
 			");
-			print_r($result);die();
+			// print_r($result);die();
 			if($result){
 				redirect('Doctors');
 			}else{
