@@ -34,6 +34,11 @@
 				$('[name="KdPoli"]').val(data.KdPoli);
 				$('[name="Phone"]').val(data.Phone);
 				$('[name="pict_name"]').html(data.file_ttd);
+				if (data.file_ttd != '' || data.file_ttd != null) {
+					$('[name="Pict"]').prop('required',false);
+				}else{
+					$('[name="Pict"]').prop('required',true);
+				}
 			}
 		});
 	}
